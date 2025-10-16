@@ -15,7 +15,7 @@
     maxlane = 6 -- Limite à 6 lignes de camions
 
     -- Sprites pour les voitures selon la direction
-    CAR_SPRITE_RIGHT = 261  -- Sprite voiture allant à droite
+    CAR_SPRITE_RIGHT = 291  -- Sprite voiture allant à droite
     CAR_SPRITE_LEFT = 293   -- Sprite voiture allant à gauche
 
     loots = {}
@@ -221,7 +221,7 @@
 
         -- Arrivée
         local arrived1 = math.abs(player.x - boss.x) < 8 and math.abs(player.y - boss.y) < 8
-        local arrived2 = multi and (math.abs(player2.x - boss.x) < 8 and math.abs(player2.y - boss.y) < 8) or not multi
+        local arrived2 = multi and (math.abs(player2.x - boss.x) < 16 and math.abs(player2.y - boss.y) < 16) or not multi
         if arrived1 and arrived2 then
             mode = "end"
             return
