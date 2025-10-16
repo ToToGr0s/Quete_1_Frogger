@@ -92,7 +92,7 @@
         print("Keys", 140, 62, menuOption == 3 and 5 or 15)
         print("Quit", 195, 62, menuOption == 4 and 5 or 15)
         print("Left / Right: Navigate ", 35, 75, 7)
-        print("W: Select ", 160, 75, 7)
+        print("SPACE : Select ", 160, 75, 7)
 
         if btnp(2) then -- Gauche
             menuOption = menuOption - 1
@@ -102,7 +102,7 @@
             menuOption = menuOption + 1
             if menuOption > 4 then menuOption = 1 end
         end
-        if keyp(23) then -- W pour Select
+        if keyp(48) then -- espace pour Select
             if menuOption == 1 then
                 multi = false
                 level = 1
@@ -280,9 +280,7 @@
             print("Arrive at work!", 25, 20, 11)
             print("Time:" .. math.floor(gameTime / 60) .. "s", 25, 30, 14) -- Changé 'time' à 'gameTime'
             print("Player 1 Loot:" .. player.loot, 25, 40, 14)
-            if multi then
-                print("Player 2 Loot:" .. player2.loot, 25, 50, 14)
-            end
+
             if gameTime <= limit then -- Changé 'time' à 'gameTime'
                 print("On time !", 180, 70, 0)
             end
