@@ -30,7 +30,7 @@
         boss.x = math.random(60, 200)
         boss.y = 8
         gameTime = 0 -- Changé de 'time' à 'gameTime'
-        limit = 600 - (level - 1) * 30
+        limit = 1000 - (level - 0.5) * 30
         if limit < 300 then limit = 300 end
 
         loots = {}
