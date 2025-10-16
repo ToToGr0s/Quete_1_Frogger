@@ -4,7 +4,7 @@
     mode = "menu"
     level = 1
     gameTime = 0 -- Changé de 'time' à 'gameTime' pour éviter conflit
-    limit = 600
+    limit = 1000
     player = {x = 112, y = 120, loot = 0, failed = false}
     player2 = nil -- Pour le mode 2 joueurs
     multi = false -- Flag pour mode multi
@@ -15,7 +15,7 @@
     maxlane = 6 -- Limite à 6 lignes de camions
 
     -- Sprites pour les voitures selon la direction
-    CAR_SPRITE_RIGHT = 291  -- Sprite voiture allant à droite
+    CAR_SPRITE_RIGHT = 261  -- Sprite voiture allant à droite
     CAR_SPRITE_LEFT = 293   -- Sprite voiture allant à gauche
 
     loots = {}
@@ -175,7 +175,7 @@
 
         -- Joueur 2 (si multi)
         if multi then
-            spr(261, player2.x, player2.y, 0, 1, 0, 0, 2, 2)
+            spr(291, player2.x, player2.y, 0, 1, 0, 0, 2, 2)
         end
 
         -- Loots
