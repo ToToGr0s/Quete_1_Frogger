@@ -175,7 +175,7 @@
 
         -- Joueur 2 (si multi)
         if multi then
-            spr(259, player2.x, player2.y, 0, 1, 0, 0, 2, 2)
+            spr(261, player2.x, player2.y, 0, 1, 0, 0, 2, 2)
         end
 
         -- Loots
