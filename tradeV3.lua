@@ -1,9 +1,7 @@
-    -- TIC-80 : Aller au boulot (Frogger-like)
-    -- Objectifs : speedrun ou retard legit
 
     mode = "menu"
     level = 1
-    gameTime = 0 -- Changé de 'time' à 'gameTime' pour éviter conflit
+    gameTime = 0
     limit = 1000
     player = {x = 112, y = 120, loot = 0, failed = false}
     player2 = nil -- Pour le mode 2 joueurs
@@ -30,7 +28,7 @@
         boss.x = math.random(60, 200)
         boss.y = 8
         gameTime = 0 -- Changé de 'time' à 'gameTime'
-        limit = 1000 - (level - 0.5) * 30
+        limit = 600- (level - 1) * 30
         if limit < 300 then limit = 300 end
 
         loots = {}
